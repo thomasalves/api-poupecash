@@ -9,7 +9,7 @@ const hbs = require("nodemailer-express-handlebars");
 const app = express()
 
 
-
+email = "thomasalves1111@gmail.com"
 const createMail = (email) => {
 const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -36,7 +36,7 @@ transporter.use(
 
 transporter.sendMail({
     from: "Poupe Cash <poupecash20@gmail.com >",
-    to: email,
+    to:"thomasalves1111@gmail.com",
     subject: "ola estou testando nodemailer",
     template: "firstEmail"
 
@@ -49,15 +49,15 @@ transporter.sendMail({
 }
 
 
-app.post("/:type", (req, res) => {
+app.post("/", (req, res) => {
   const { email, name } = req.body;
   const { type } = req.params;
 
   console.log("[EMAIL, NAME ==>]", email, name);
 
 
-
   createMail(email);
+
 });
 
 app.listen(3000, (req, res) => {
