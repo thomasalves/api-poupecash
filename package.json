@@ -1,0 +1,17 @@
+{
+  "name": "api-poupecash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node email.js"
+  },
+  "repository": "https://github.com/thomasalves/api-poupecash.git",
+  "author": "Thomas Alves <thomasalves1111@gmai.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "loader": "^2.1.1",
+    "nodemailer": "^6.4.10",
+    "nodemailer-express-handlebars": "^4.0.0"
+  }
+}
