@@ -48,17 +48,8 @@ transporter.sendMail({
 
 }
 
-
-app.post("/", (req, res) => {
-  const { email, name } = req.body;
-  const { type } = req.params;
-
-  console.log("[EMAIL, NAME ==>]", email, name);
-
-
   createMail(email);
 
-});
 
 app.listen(3000, (req, res) => {
   console.log("is running boy");
